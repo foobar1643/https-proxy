@@ -1,0 +1,32 @@
+[package]
+name = "https-proxy"
+version = "1.0.0"
+edition = "2018"
+
+[profile.release]
+lto = "fat"
+
+[dependencies]
+# Runtime
+tokio = { version = "1.2", features = ["full"] }
+tokio-rustls = "0.22"
+async-stream = "0.3"
+
+# HTTP
+hyper = { version = "0.14", features = ["full"] }
+hyper-rustls = "0.22"
+rustls = "0.19"
+
+# Logging
+log = "0.4"
+fern = { version = "0.6", features = ["colored"] }
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+toml = "0.5"
+
+# Utils
+futures-util = "0.3"
+chrono = "0.4"
+lazy_static = "1.4"
+regex = "1.4"
