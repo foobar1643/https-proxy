@@ -14,7 +14,7 @@ $ cargo build --release
 ```shell
 $ mkdir ~/proxy
 $ cp ./target/release/https-proxy ~/proxy/https-proxy
-$ cp ./config.toml.example ~/proxy/config.toml
+$ cp ./config.toml.example.example ~/proxy/config.toml
 ```
 
 4. Generate a new TLS certificate that will be used by the proxy. 
